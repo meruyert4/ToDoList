@@ -63,9 +63,3 @@ ToDoList/
 - `GET /tasks/:id` — Get a single task by ID
 - `PUT /tasks/:id` — Update a task by ID
 - `DELETE /tasks/:id` — Delete a task by ID
-
-## Notes
-
-- The file `frontForDef.html` is present but empty and not used by the application.
-- The frontend is served from the `public/` directory.
-- All API requests are made to the same server (CORS is not an issue if using the provided frontend).
