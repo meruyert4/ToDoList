@@ -1,0 +1,213 @@
+
+        :root {
+            --primary-purple: #7E57C2;
+            --dark-purple: #5E35B1;
+            --light-purple: #B39DDB;
+            --lighter-purple: #D1C4E9;
+            --lightest-purple: #EDE7F6;
+            --white: #FFFFFF;
+            --gray: #F5F5F5;
+        }
+        
+        body {
+            background-color: var(--lightest-purple);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--dark-purple);
+        }
+        
+        .app-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            color: var(--dark-purple);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: var(--light-purple);
+            font-size: 1.1rem;
+        }
+        
+        .add-task-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(126, 87, 194, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: none;
+        }
+        
+        .add-task-card h3 {
+            color: var(--dark-purple);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control, .form-control:focus {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--lighter-purple);
+            background-color: var(--gray);
+        }
+        
+        .form-control:focus {
+            border-color: var(--light-purple);
+            box-shadow: 0 0 0 0.25rem rgba(179, 157, 219, 0.25);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-purple);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-purple);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .tasks-header {
+            color: var(--dark-purple);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--lighter-purple);
+        }
+        
+        .task-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(126, 87, 194, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(126, 87, 194, 0.15);
+        }
+        
+        .task-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary-purple);
+        }
+        
+        .task-title {
+            color: var(--dark-purple);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .task-description {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .task-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+        }
+        
+        .task-author {
+            color: var(--primary-purple);
+            font-weight: 500;
+        }
+        
+        .task-date {
+            color: #888;
+        }
+        
+        .task-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn-sm {
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .btn-danger {
+            background-color: #E53935;
+        }
+        
+        .btn-danger:hover {
+            background-color: #C62828;
+        }
+        
+        .btn-warning {
+            background-color: #FFB300;
+            color: #333;
+        }
+        
+        .btn-warning:hover {
+            background-color: #FF8F00;
+            color: #333;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--light-purple);
+        }
+        
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--lighter-purple);
+        }
+        
+        .empty-state h4 {
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 0 0.5rem;
+            }
+            
+            .add-task-card {
+                padding: 1.5rem;
+            }
+            
+            .task-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
